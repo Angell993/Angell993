@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="671.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fregonasplym.FXMLVistaController">
+   <children>
+      <Label layoutX="58.0" layoutY="24.0" text="FREGONAS PLYM">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaFregona" layoutX="454.0" prefHeight="675.0" prefWidth="540.0">
+        <columns>
+          <TableColumn fx:id="tcModelo" prefWidth="88.0" text="Modelo" />
+          <TableColumn fx:id="tcAlto" prefWidth="75.0" text="Alto" />
+            <TableColumn fx:id="tcColor" prefWidth="120.0" text="Color" />
+            <TableColumn fx:id="tcMarca" minWidth="0.0" prefWidth="113.0" text="Marca" />
+           <TableColumn fx:id="tcPrecio" prefWidth="142.0" resizable="false" text="Precio" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="14.0" layoutY="115.0" prefHeight="263.0" prefWidth="406.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="265.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Modelo">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textModelo" prefHeight="31.0" prefWidth="184.0" GridPane.columnIndex="1" />
+            <TextField fx:id="textAlto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Alto" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textColor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Color" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Marca" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textMarca" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Precio" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textPrecio" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="ID_Fregona" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textIdFregona" prefHeight="31.0" prefWidth="238.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <GridPane layoutX="22.0" layoutY="464.0" prefHeight="118.0" prefWidth="366.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="183.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="183.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnIngresar" mnemonicParsing="false" onAction="#ingresarRegistro" prefHeight="43.0" prefWidth="153.0" text="Añadir">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificarRegistro" prefHeight="43.0" prefWidth="146.0" text="Modificar" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminarRegistro" prefHeight="43.0" prefWidth="153.0" text="Eliminar" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#borrarTextField" prefHeight="43.0" prefWidth="146.0" text="Nuevo!!!" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
